@@ -144,10 +144,10 @@ gmServiceGmail.prototype = {
       
       // Gmail Offline cookie
       var cookie = {
-        name: (this.isHosted ? "GAUSR@" + this.domain : "GAUSR"),
-        value: this.email,
-        host: "mail.google.com",
-        path: (this.isHosted ? "/a/" + this.domain : "/mail"),
+        name: "GAUSR",
+        value: (this.isHosted ? "mail:this.email" : "this.email"),
+        host: (this.isHosted ? "accounts.google.com" : "mail.google.com"),
+        path: (this.isHosted ? "/" + this.domain : "/mail"),
         isSecure: false,
         isHttpOnly: false,
         isSession: true,
