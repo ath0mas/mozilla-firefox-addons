@@ -346,20 +346,23 @@ var DeezerMSN = (function(){
 			if(doc.nodeName != "#document") return true;
 			if(doc.location.hostname != 'www.deezer.com') return true;
 			
-			var home = doc.getElementById('header_links');
+			var home = doc.getElementById('user_logged');
 			if(!home) return true;
 		
 			var msg = doc.getElementById('deezermsn_msg');
 			if(!msg) {
 
-				var span = doc.createElement('div');
-				span.setAttribute('id','deezermsn_msg');
-				span.setAttribute('class','main');
+				var header_content_profil_user = doc.getElementById('header_content_profil_user');
+				header_content_profil_user.setAttribute('style','float: right;');
 				
-				home.appendChild(span);
+				var div_deezermsn = doc.createElement('div');
+				div_deezermsn.setAttribute('id','deezermsn_msg');
+				div_deezermsn.setAttribute('style','float: right;min-width:70px;');
+				
+				home.appendChild(div_deezermsn);
 				var link = doc.createElement('a');
 				link.setAttribute('href','javascript:void(0);');
-				//link.setAttribute('style','color: rgb(204, 204, 204);');
+				link.setAttribute('style','color: rgb(204, 204, 204); line-height: 34px;');
 				link.setAttribute('class','bgrepeat');
 				
 				if(Preference.getBoolPref("enabled")) {
@@ -368,8 +371,8 @@ var DeezerMSN = (function(){
 					var text = doc.createTextNode(locales.getString("deezermsnDisabled"));
 				}
 				link.appendChild(text);
-				span.appendChild(link);
-				home.appendChild(span);
+				div_deezermsn.appendChild(link);
+				home.appendChild(div_deezermsn);
 				link.addEventListener('click', function(aEvent) {
 					link.removeChild(link.firstChild);
 					if(Preference.getBoolPref("enabled")) {
