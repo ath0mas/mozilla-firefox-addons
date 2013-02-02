@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+    <ShortName>Maven Repository</ShortName>
+    <LongName>Maven Repository Search</LongName>
+    <Description>Use mvnrepository.com to search for Java and Maven artifacts in Maven Repository.</Description>
+    <Tags>java maven mvn artifact repository</Tags>
+    <Image width="16" height="16">http://mvnrepository.com/favicon.ico</Image>
+    <Url type="text/html" method="GET" template="http://mvnrepository.com/search.html?query={searchTerms}"/>
+    <moz:SearchForm>http://mvnrepository.com/</moz:SearchForm>
+    <Attribution>Search data Copyright MvnRepository All Rights Reserved.</Attribution>
+    <Developer>Alexis THOMAS</Developer>
+    <Contact>fr.alexisthomas@gmail.com</Contact>
+    <Url type="application/opensearchdescription+xml" rel="self"
+         template="https://raw.github.com/ath0mas/mozilla-firefox-addons/master/mine/search/maven-central/mvn-repository-opensearch.xml"/>
+</OpenSearchDescription>
