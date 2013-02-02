@@ -12,5 +12,5 @@
     <Developer>Alexis THOMAS</Developer>
     <Contact>fr.alexisthomas@gmail.com</Contact>
     <Url type="application/opensearchdescription+xml" rel="self"
-         template="https://raw.github.com/ath0mas/mozilla-firefox-addons/master/mine/search/maven-central/mvn-repository-opensearch.xml"/>
+         template="https://raw.github.com/ath0mas/mozilla-firefox-addons/master/mine/search/maven-repository/mvn-repository-opensearch.xml"/>
 </OpenSearchDescription>
